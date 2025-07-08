@@ -21,3 +21,10 @@ document.getElementById('poem-form').addEventListener('submit', function(event) 
 
     this.reset(); // Reset the form
 });
+javascript
+const mobileMenu = document.getElementById('mobile-menu');
+const nav = document.querySelector('.nav');
+
+mobileMenu.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
