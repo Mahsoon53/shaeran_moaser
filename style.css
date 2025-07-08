@@ -51,3 +51,15 @@ form button {
     cursor: pointer;
 }
 ```
+
+```css
+#add-poem {
+    margin-top: 20px;
+}
+
+#add-poem textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 100px;
+}
+`
