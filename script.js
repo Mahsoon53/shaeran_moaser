@@ -5,3 +5,19 @@ document.getElementById('registration-form').addEventListener('submit', function
     alert('ثبت‌نام با موفقیت انجام شد!');
 });
 ```
+
+```javascript
+const poemList = document.getElementById('poem-list');
+
+document.getElementById('poem-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const title = this.querySelector('input').value;
+    const content = this.querySelector('textarea').value;
+
+    const poemItem = document.createElement('div');
+    poemItem.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+    poemList.appendChild(poemItem);
+
+    this.reset(); // Reset the form
+});
