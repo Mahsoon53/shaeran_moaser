@@ -1,4 +1,9 @@
+function toggleMenu() {
+  document.getElementById("mainMenu").classList.toggle("active");
+}
 
+// انیمیشن یا تایپ در مراحل بعدی قابل اضافه کردنه
+console.log("صفحه اصلی سایت صدای شاعر بارگذاری شد.");
 ```javascript
 document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault();
