@@ -33,3 +33,22 @@ const nav = document.querySelector('.nav');
 mobileMenu.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
+function toggleChat() {
+  document.getElementById("chatBox").classList.toggle("active");
+}
+
+function chatReply(type) {
+  let msg = "";
+  switch(type) {
+    case "signup":
+      msg = "برای ثبت‌نام شاعر، لطفاً به صفحه 'ثبت‌نام' مراجعه کنید.";
+      break;
+    case "gallery":
+      msg = "برای دیدن اشعار زیبا، وارد گالری اشعار شوید.";
+      break;
+    case "contact":
+      msg = "برای ارتباط با ما، به صفحه 'تماس با ما' سر بزنید.";
+      break;
+  }
+  alert(msg);
+}
