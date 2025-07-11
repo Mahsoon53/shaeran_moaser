@@ -52,3 +52,32 @@ function chatReply(type) {
   }
   alert(msg);
 }
+function toggleChat() {
+  document.getElementById("chatBox").classList.toggle("active");
+}
+
+function faqAnswer(type) {
+  let msg = "";
+  switch(type) {
+    case "ثبت‌نام":
+      msg = "برای ثبت‌نام، وارد بخش 'ثبت‌نام شاعر' شوید و فرم را پر کنید.";
+      break;
+    case "تماس":
+      msg = "برای ارتباط، از صفحه 'تماس با ما' استفاده کنید یا ایمیل بزنید.";
+      break;
+    case "ارسال شعر":
+      msg = "پس از ورود، می‌توانید از طریق داشبورد اشعار خود را ثبت کنید.";
+      break;
+  }
+  document.getElementById("botReply").innerText = msg;
+}
+
+function submitQuestion() {
+  const q = document.getElementById("userQuestion").value.trim();
+  let replyBox = document.getElementById("botReply");
+  if (!q) {
+    replyBox.innerText = "لطفاً سوالی وارد کنید.";
+  } else {
+    replyBox.innerText = `سوال "${q}" دریافت شد. مدیر سایت به زودی پاسخ می‌دهد ✉️`;
+  }
+}
