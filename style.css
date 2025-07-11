@@ -172,67 +172,55 @@ ul#mainMenu li a {
   background: #6a1b9a;
   color: white;
   padding: 16px;
-  font-size: 0.9em;
+  font-size: 0.5em;
   margin-top: 50px;
     }
-.chat-launch {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #6a1b9a;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-
-.chat-box {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 240px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  display: none;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-.chat-box.active {
-  display: block;
-}
-
-.chat-header {
-  background: #ff4081;
-  color: white;
-  padding: 12px;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-.chat-body {
-  padding: 12px;
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
   text-align: right;
+}
+
+.faq-list li {
+  cursor: pointer;
+  background: #eee;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: background 0.3s;
+}
+
+.faq-list li:hover {
+  background: #d1c4e9;
+}
+
+.chat-body input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+  box-sizing: border-box;
 }
 
 .chat-body button {
   background: #6a1b9a;
   color: white;
   border: none;
-  padding: 8px 12px;
-  margin: 6px 0;
+  padding: 8px 10px;
+  margin-top: 6px;
   border-radius: 8px;
-  width: 100%;
-  font-size: 0.9em;
   cursor: pointer;
   box-shadow: 0 4px 0 #4a148c;
 }
 
-.chat-body button:active {
-  transform: translateY(4px);
-  box-shadow: none;
-    }
+.bot-reply {
+  margin-top: 10px;
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  color: #333;
+  } 
