@@ -7,16 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 🤖 بات پاسخ‌گوی شاعرانه -->
-<div class="chat-launch" onclick="toggleChat()">🗨️ راهنمای سایت</div>
-
-<div class="chat-box" id="chatBox">
-  <div class="chat-header">👋 سلام دوست عزیز!</div>
-  <div class="chat-body">
-    <p>چی کمکت کنم؟ یکی از گزینه‌ها رو انتخاب کن:</p>
-    <button onclick="chatReply('signup')">ثبت‌نام شاعر</button>
-    <button onclick="chatReply('gallery')">مشاهده اشعار</button>
-    <button onclick="chatReply('contact')">تماس با ما</button>
   </div>
 </div>
   <!-- 🔺 منوی همبرگری -->
@@ -74,3 +64,24 @@
     © 1404 | طراحی توسط حسین سبزواری 💖
   </footer> 
 </html>
+
+<!-- 🤖 دکمه بات پاسخگو -->
+<div class="chat-launch" onclick="toggleChat()">🤖</div>
+
+<!-- 📘 پنجره سوالات و بات -->
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">بات پاسخگو 👋</div>
+  <div class="chat-body">
+    <p><strong>سوالات متداول:</strong></p>
+    <ul class="faq-list">
+      <li onclick="faqAnswer('ثبت‌نام')">چطور ثبت‌نام کنم؟</li>
+      <li onclick="faqAnswer('تماس')">چطور با مدیر سایت تماس بگیرم؟</li>
+      <li onclick="faqAnswer('ارسال شعر')">چطور شعرم رو ارسال کنم؟</li>
+    </ul>
+
+    <p style="margin-top:10px;"><strong>سوال خودتو بپرس:</strong></p>
+    <input type="text" id="userQuestion" placeholder="بنویس سوالت..." />
+    <button onclick="submitQuestion()">ارسال سوال</button>
+    <div id="botReply" class="bot-reply"></div>
+  </div>
+</div>
