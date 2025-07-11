@@ -224,3 +224,77 @@ ul#mainMenu li a {
   font-size: 0.9em;
   color: #333;
   } 
+/* منوی بالا */
+nav.top-bar {
+  background: #6a1b9a;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  font-size: 2em;
+  cursor: pointer;
+  background: #ff4081;
+  padding: 6px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 #c2185b;
+  transition: transform 0.2s;
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
+}
+
+/* منوی کشویی */
+.menu-drawer {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #7e57c2;
+  width: 200px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.menu-drawer.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu-drawer ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.menu-drawer ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.menu-drawer ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  }
