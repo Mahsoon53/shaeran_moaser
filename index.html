@@ -7,7 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- 🤖 بات پاسخ‌گوی شاعرانه -->
+<div class="chat-launch" onclick="toggleChat()">🗨️ راهنمای سایت</div>
 
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">👋 سلام دوست عزیز!</div>
+  <div class="chat-body">
+    <p>چی کمکت کنم؟ یکی از گزینه‌ها رو انتخاب کن:</p>
+    <button onclick="chatReply('signup')">ثبت‌نام شاعر</button>
+    <button onclick="chatReply('gallery')">مشاهده اشعار</button>
+    <button onclick="chatReply('contact')">تماس با ما</button>
+  </div>
+</div>
   <!-- 🔺 منوی همبرگری -->
   <nav class="top-bar">
     <span class="logo">صدای شاعر</span>
@@ -34,7 +45,7 @@
     <div class="card-grid">
       <div class="poet-card">
         <img src="images/poet1.jpg" alt="شاعر ۱">
-        <p>الا یا ایها الساقی...</p>
+        </p>دوباره دفتر شعرم نظر به من دارد ...</p>
       </div>
       <div class="poet-card">
         <img src="images/poet2.jpg" alt="شاعر ۲">
@@ -45,11 +56,6 @@
   </section>
 
   </div>
-
-  <!-- 🔻 فوتر -->
-  <footer class="site-footer">
-    © 1404 | طراحی توسط حسین سبزواری 💖
-  </footer>
 
   <script src="script.js"></script>
 </body>
@@ -62,4 +68,9 @@
     <img src="images/فرامرز.jpg" alt="فرامرز">
   </div>
 </div>
+  
+  <!-- 🔻 فوتر -->
+  <footer class="site-footer">
+    © 1404 | طراحی توسط حسین سبزواری 💖
+  </footer> 
 </html>
