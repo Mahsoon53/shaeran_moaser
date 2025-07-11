@@ -81,3 +81,6 @@ function submitQuestion() {
     replyBox.innerText = `سوال "${q}" دریافت شد. مدیر سایت به زودی پاسخ می‌دهد ✉️`;
   }
 }
+function toggleMenu() {
+  document.getElementById("menuDrawer").classList.toggle("active");
+}
