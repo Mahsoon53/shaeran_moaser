@@ -1,1 +1,126 @@
 fetch("https://script.google.com/macros/s/AKfycb123456.../exec") 
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>سالن مشاهیر | صدای شاعر</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Vazir', Tahoma, sans-serif;
+      background: linear-gradient(to right, #ede7f6, #fce4ec);
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    #poet-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .poet-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .poet-card:hover {
+      transform: scale(1.03);
+    }
+
+    .poet-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    .poet-card h3 {
+      margin: 0;
+      color: #4a148c;
+    }
+
+    .poet-card p {
+      font-size: 0.9em;
+      margin: 6px 0;
+      color: #555;
+    }
+
+    .poet-card blockquote {
+      font-style: italic;
+      color: #7b1fa2;
+      background: #f3e5f5;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .poet-card a {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: white;
+      background: #6a1b9a;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 0 #4a148c;
+    }
+
+    .poet-card a:hover {
+      background: #8e24aa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🕋 سالن مشاهیر شاعران ایران</h1>
+  <div id="poet-list">در حال دریافت داده‌ها...</div>
+
+  <script>
+    fetch("https://script.google.com/macros/s/AKfyc123456.../exec") // 🔧 لینک API شیتت رو اینجا بذار
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("poet-list");
+        container.innerHTML = ""; // پاک کردن متن اولیه
+
+        data.forEach(poet => {
+          if (poet.verified === "تایید‌شده") {
+            let card = document.createElement("div");
+            card.className = "poet-card";
+
+            card.innerHTML = `
+              <img src="${poet.photo}" alt="${poet.name}">
+              <h3>${poet.name}</h3>
+              <p>تخلص: ${poet.takhallos}</p>
+              <blockquote>${poet.poem}</blockquote>
+              <a href="${poet.page_link}">مشاهده صفحه شاعر</a>
+            `;
+            container.appendChild(card);
+          }
+        });
+
+        if (container.innerHTML === "") {
+          container.innerHTML = "<p>هنوز شاعری ثبت نشده یا تایید نشده است.</p>";
+        }
+      })
+      .catch(err => {
+        console.error("خطا در دریافت داده:", err);
+        document.getElementById("poet-list").innerHTML = "<p>خطا در اتصال به سالن مشاهیر!</p>";
+      });
+  </script>
+
+</body>
+    </html>
